@@ -1,0 +1,20 @@
+<tpl name="gmap_events_content">
+    <div id="navigation" style="display: none">
+        <table class="gmap_event"> 
+            <tr>
+                <td style="width:60px">
+                    <input type="button" value=" Now " events="onclick=onNowClick"/>
+                </td>
+                <td style="width:30px">
+                    <div class="left" events="onclick=onPrevClick" title="Prev month"></div>
+                </td>
+                <td style="width:120px; text-align: center;"><div id="current_date" style="font-weight:bold"></div></td>
+                <td style="width:30px">
+                    <div class="right" events="onclick=onNextClick" title="Next month"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+<!--    <strong id="category_name"></strong> -->
+    <div id="map"></div>
+</tpl>

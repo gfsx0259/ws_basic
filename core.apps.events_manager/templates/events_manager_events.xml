@@ -1,0 +1,37 @@
+<tpl name="events_manager_events">
+    <div id="content_events" style="display: none">
+
+        <div class="form_row">
+            <wsc_button id="btn_products_add_product" events="onclick=onBtnClick_Events_AddEvent" title="Add Event"/>
+        </div>
+
+
+        <div class="form_row">
+            <wsc_text class="float_left w300" id="inp_filter_event_name" hint="filter list..." clear_control="1"/>
+            <wsc_select id="inp_filter_category" class="float_left w200"/>
+            <wsc_button events="onclick=onEventsSearchClick" title="Sort Event" class="float_left"/>
+        </div>
+
+
+        <div id="events_pager_box"></div>
+
+        <div class="form_row" id="msg_events" style="display: none">
+            <div class="message_info" id="msg_events_content"></div>
+        </div>
+
+        <div class="form_row">
+            <table class="nice">
+                <tbody id="events_table">
+                    <tr class="head">
+                        <th class="w60px">Date Start</th>
+                        <th>Title</th>
+                        <th>Category</th>
+                        <th class="w45 ta_center last">Actions</th>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="nice_table_footer"><div></div></div>
+        </div>
+
+    </div>
+</tpl>

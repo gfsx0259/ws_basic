@@ -1,0 +1,18 @@
+/*td|Image cell*/
+.image_gallery table td {
+    vertical-align: top;
+    border: 0;
+    margin: 20px;
+    padding: 1px;
+}
+
+/*img|Image*/
+.image_gallery .cell_div img {
+}
+
+/*img_box|Image box*/
+.image_gallery .img_box {
+    z-index: 10;
+    border: 1px solid #E3E3E3;
+    padding: 10px;
+}

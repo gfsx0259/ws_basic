@@ -1,0 +1,9 @@
+<tpl name="paragraph_content">
+<div style="width:100%; overflow: hidden; zoom: 1;">
+<div id="p_image" class="paragraph_image">
+<img id="p_image_img" style="width:100%"/>
+</div>
+<div id="p_text" class="paragraph_text" >Click here for change text</div>
+</div>
+<div id="date_box" class="date_box" style="display: none">Date of document: <span id="date"></span></div>
+</tpl>

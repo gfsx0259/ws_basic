@@ -1,0 +1,40 @@
+<tpl name="events_manager_categories">
+    <div id="content_categories" style="display: none">
+        <div class="form_row">
+            <wsc_text id="inp_title" class="float_left w400"/>
+            <div class="float_left w60" title="Click to select text color">
+                <div id="inp_bg_color" class="inp_color_preview" style="margin-top: 2px;margin-left: 2px;" events="onclick=showBgColorPicker"></div>
+                <img src="/static/icons/color_swatch.png" class="btn_color_picker" style="margin-top: 2px;margin-left: 2px;" events="onclick=showBgColorPicker"/>
+            </div>
+            <div class="float_left w60" title="Click to select background color">
+                <div id="inp_color" class="inp_color_preview" style="margin-top: 2px;margin-left: 2px;" events="onclick=showColorPicker"></div>
+                <img src="/static/icons/color_swatch.png" class="btn_color_picker" style="margin-top: 2px;margin-left: 2px;" events="onclick=showColorPicker"/>
+            </div>
+
+            <div class="float_left w100">
+                <wsc_button id="btn_save_categories" events="onclick=onAddCategoryClick" title="Add Category"/>
+                <wsc_button id="btn_update_categories" events="onclick=onUpdateCategoryClick" style="display: none" title="Update"/>
+            </div>
+        </div>
+
+
+        <div id="pager_box"></div>
+
+        <div class="form_row" id="msg_categories" style="display: none">
+            <div class="message_info" id="msg_categories_content"></div>
+        </div>
+
+        <div class="form_row">
+            <table class="nice">
+                <tbody id="categories_table">
+                    <tr class="head">
+                        <th>Category Name</th>
+                        <th class="w45 ta_center last">Actions</th>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="nice_table_footer"><div></div></div>
+        </div>
+
+    </div>
+</tpl>

@@ -1,0 +1,33 @@
+.image_gallery {
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+}
+.image_gallery table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.image_gallery table td {
+    position: relative;
+}
+
+.image_gallery .cell_div {
+    overflow: hidden;
+    text-align: center;
+    width: auto;
+    min-height: 16px;
+    position: relative;
+}
+
+    .image_gallery .img_box {
+        width: auto;
+    }
+
+    .image_gallery .empty .img_box {
+        visibility: hidden;
+    }
+
+.image_gallery .caption {
+    line-height: normal !important;
+}

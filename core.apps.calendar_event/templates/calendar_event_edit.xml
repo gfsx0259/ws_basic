@@ -1,0 +1,137 @@
+<tpl name="calendar_event_edit">
+
+    <div class="calendar_manager" events="onclick=onPopupContentClick" id="calendar_manager_content">
+
+        <div id="when_time_div" class="popup_time" ></div>
+        <div id="status_msg" style="display: false"></div>
+
+
+        <div id="form_table">
+
+            <fieldset class="wsc wsc_odd">
+                <div class="legend">General</div>
+
+                <div class="form_row">
+                    <label>Category:</label>
+                    <wsc_select id="inp_category_id" class="w300"/>
+                </div>
+
+                <div class="form_row">
+                    <label>What:</label>
+                    <wsc_text id="inp_what"/>
+                </div>
+
+                <div class="form_row">
+                    <label>Tags:</label>
+                    <wsc_text id="inp_tags"/>
+                </div>
+
+                <div class="form_row">
+                    <wsc_textarea class="h50" id="inp_description" title="Description"/>
+                </div>
+            </fieldset>
+
+
+
+            <fieldset class="wsc">
+                <div class="legend">When</div>
+                <div class="form_row">
+                    <wsc_checkbox id="inp_all_day" title="All day" events="onchange=updateTimeInputs"/>
+                </div>
+                <div class="form_row" id="box_time_all">
+                    <label>Time:</label>
+                    <wsc_text id="inp_time_start" name="start" class="float_left w50" size="2" events="onclick=showTimeList"/>
+                    <wsc_select id="inp_time_start_ampm" class="float_left w60">
+                        <option value="am">am</option>
+                        <option value="pm">pm</option>
+                    </wsc_select>
+                    <div class="float_left" id="box_time_end">
+                        <p class="text">to:</p>
+                        <wsc_text id="inp_time_end" name="end" class="float_left w50" size="2" events="onclick=showTimeList"/>
+                        <wsc_select id="inp_time_end_ampm" class="float_left w60">
+                            <option value="am">am</option>
+                            <option value="pm">pm</option>
+                        </wsc_select>
+                    </div>
+                    <wsc_checkbox id="inp_has_time_end" title="End time" events="onchange=updateTimeInputs"/>
+                </div>
+                <div class="form_row">
+                    <label>Date:</label>
+                    <div class="popup_cal" style="float: left" events="onclick=showDatePicker"></div>
+                    <p class="text" id="div_date"></p>
+                    <input type="hidden" id="inp_date"/>
+                </div>
+            </fieldset>
+
+
+
+
+            <fieldset class="wsc wsc_odd">
+                <div class="legend">Where</div>
+
+                <div class="form_row">
+                    <label>Street:</label>
+                    <wsc_text id="inp_street"/>
+                </div>
+                <div class="form_row">
+                    <label>City:</label>
+                    <wsc_text id="inp_city"/>
+                </div>
+                <div class="form_row">
+                    <label>State:</label>
+                    <wsc_text id="inp_state"/>
+                </div>
+                <div class="form_row">
+                    <label>Country:</label>
+                    <wsc_text id="inp_country"/>
+                </div>
+            </fieldset>
+
+
+
+            <fieldset class="wsc">
+                <div class="legend">Misc</div>
+                <div class="form_row">
+                    <label>Contact name:</label>
+                    <wsc_text id="inp_contact_name"/>
+                </div>
+                <div class="form_row">
+                    <label>Contact phone:</label>
+                    <wsc_text id="inp_contact_phone"/>
+                </div>
+                <div class="form_row">
+                    <label>Cost:</label>
+                    <wsc_text class="w75" id="inp_cost"/>
+                </div>
+                <div class="form_row">
+                    <label>RSVP date:</label>
+                    <div class="float_left w130">
+                        <div class="popup_cal" style="float: left" events="onclick=showRsvpDatePicker"></div>
+                        <div id="div_rsvp_date" style="float: right"></div>
+                    </div>
+                    <input type="hidden" id="inp_rsvp_date"/>
+                </div>
+                <div class="form_row">
+                    <label>More Info:</label>
+                     <wsc_select id="inp_more_info_page" class="float_left w300"/>
+                </div>
+            </fieldset>
+
+
+            <fieldset class="wsc wsc_odd">
+                <div class="legend">Recurrence</div>
+                <include tpl="calendar_event_edit_rec"/>
+            </fieldset>
+
+        </div>
+
+    </div>
+
+
+    <div class="popup_buttons"><div class="popup_buttons_wrapper">
+        <wsc_button id="btn_delete" class="float_left" title="Delete" events="onclick=onDeleteClick"/>
+        <wsc_button id="btn_cancel" class="float_right" title="Cancel" events="onclick=onCloseClick"/>
+        <wsc_button id="btn_save" class="float_right" title="Save" events="onclick=onSaveClick"/>
+    </div></div>
+
+</tpl>

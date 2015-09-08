@@ -1,0 +1,13 @@
+.app_picture_container {
+    position: relative;
+    overflow: hidden;
+}
+
+    .app_picture_container .center {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 1px;
+        height: 1px;
+        overflow: visible;
+    }

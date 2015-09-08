@@ -1,0 +1,44 @@
+.slideshow {
+    position: relative;
+}
+.slideshow .slideshow_img {
+    vertical-align: middle;
+    width: auto;
+    border: 0;
+}
+
+.slideshow .slideshow_box {
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+.slideshow .slide {
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+}
+
+    .slideshow .slide_img {
+        width: 100%;
+        border: 0;
+    }
+
+        .slideshow .slide_img_left {
+            width: 25%;
+            float: left;
+            margin: 0 10px 10px 0;
+        }
+
+        .slideshow .slide_img_right {
+            width: 25%;
+            float: right;
+            margin: 0 0 10px 10px;
+        }
+
+
+    .slideshow .slide_doc {
+        text-align: justify;
+    }

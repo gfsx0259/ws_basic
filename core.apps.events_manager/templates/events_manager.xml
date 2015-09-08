@@ -1,0 +1,31 @@
+<tpl name="events_manager">
+
+    <div class="popup_panels" id="events_manager">
+        <div class="popup_left_panel_box">
+            <wsc_box>
+                <div class="popup_sidebar" id="left_menu">
+                    <a id="bar_events" bar_name="events" href="void" events="onclick=onBarClick">
+                        <img src="/static/folders/events.png"/>Events
+                    </a>
+                    <a id="bar_categories" bar_name="categories" href="void" events="onclick=onBarClick">
+                        <img src="/static/folders/categories.png"/>Categories
+                    </a>
+                </div>
+            </wsc_box>
+        </div>
+
+        <div class="popup_right_panel_box">
+            <wsc_box>
+                <div class="popup_right_panel" id="sections_content">
+                    <include tpl="events_manager_events"/>
+                    <include tpl="events_manager_categories"/>
+                </div>
+            </wsc_box>
+        </div>
+    </div>
+
+    <div class="popup_buttons"><div class="popup_buttons_wrapper">
+        <wsc_button class="float_right" title=" Ok " events="onclick=onOkClick"/>
+    </div></div>
+
+</tpl>

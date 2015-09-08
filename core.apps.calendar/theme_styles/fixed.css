@@ -1,0 +1,13 @@
+.event_popup table{
+    width:100%;
+}
+
+.event_calendar td {
+    vertical-align: top;
+    width: 11px;
+}
+
+.event_calendar th {
+    vertical-align: top;
+    width: 11px;
+}

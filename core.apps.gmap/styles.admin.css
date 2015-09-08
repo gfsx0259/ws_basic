@@ -1,0 +1,11 @@
+.find_address {
+}
+
+    .find_address .wsc_button {
+        width: 35px;
+        float: right;
+    }
+
+    .find_address .wsc_text {
+        margin-right: 45px;
+    }

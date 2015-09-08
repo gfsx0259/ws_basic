@@ -1,0 +1,219 @@
+/*event_calendar|Calendar box*/
+.event_calendar{
+    font-size: 11px;
+    background: #FFF;
+}
+
+
+/*link|Link*/
+.event_calendar a {
+    background: none;
+    color: #333;
+    cursor: pointer;
+}
+
+/*link:hover|Link mouse over*/
+.event_calendar a:hover {
+    background: none;
+    color: #333;
+    cursor: pointer;
+}
+
+/*nav_panel|Navigation bar*/
+.event_calendar .nav_panel {
+}
+
+
+/*date_title|Today date*/
+.event_calendar .nav_panel .date_title {
+    width: 120px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/*btn_now|Button now*/
+.event_calendar .nav_panel input.btn {
+    cursor: pointer;
+    font-size: 90%;
+    height: 15px;
+    padding: 0 4px;
+    background: #7799bb;
+    border: none;
+    color: #FFF;
+    margin: 0 5px 0 0;
+}
+
+/*btn_left|Button prev month*/
+.event_calendar .nav_panel div.left {
+    width:29px;
+    height: 15px;
+    cursor:pointer;
+    background: url(/themes/.default/images/icons/left.png) no-repeat;
+}
+
+/*btn_right|Button next month*/
+.event_calendar .nav_panel div.right {
+    width:29px;
+    height: 15px;
+    cursor:pointer;
+    background: url(/themes/.default/images/icons/right.png) no-repeat;
+}
+
+/*month_title|month_title*/
+.event_calendar .month_title {
+    font-weight: bold;
+    font-size: 14px;
+    margin: 10px 0 5px 0;
+}
+
+
+/*table|Table*/
+.event_calendar .tableView{
+    width:100%;
+    border-collapse: collapse;
+    border-color:#91ADDD;
+    margin-left : 1px;
+    table-layout: fixed;
+}
+
+/*table_header|Table header*/
+.event_calendar table .header {
+    background: #cfdfef none repeat scroll 0 0;
+}
+
+/*table_header_th|Table header*/
+.event_calendar table th {
+    height: 18px;
+    text-align: center;
+}
+
+/*table_td|table_td*/
+.event_calendar table td {
+    height: 50px;
+}
+
+
+/*table_header_today|Table header today*/
+.event_calendar table .headerToday{
+    background: #E8EEF7  none repeat scroll 0 0;
+    min-height: 17px;
+    text-align: center;
+    vertical-align: top;
+}
+
+/*table_cell_header|Table cell header*/
+.event_calendar .day_header{
+    width:100%;
+    background:#EFEFF7;
+}
+
+/*table_cell_today|Table cell today*/
+.event_calendar .today{
+    color: red;
+}
+
+/*table_cell_last_day|Table cell last day*/
+.event_calendar .lastDay{
+    color: grey;
+}
+
+
+
+/*event_header|Event header*/
+.event_calendar .event_header {
+    overflow: hidden;
+    width: auto;
+    text-align:left;
+    display:block;
+    padding: 2px 4px;
+    margin: 2px;
+    border: 1px solid #EEE;
+    text-decoration: none;
+}
+
+/*event_header:hover|Event header mouse over*/
+.event_calendar .event_header:hover {
+    text-decoration: underline;
+}
+
+
+
+/*event_day|Event day*/
+.event_calendar .event_day {
+    margin-top: -1px;
+    border: 1px solid #91addd;
+    background: #FFF;
+    color: #333;
+}
+
+/*event_day_title|Event day title*/
+.event_calendar .event_day .title {
+    border-bottom: 1px solid #91addd;
+    background: #cfdfef;
+    padding: 1px 4px;
+    font-weight: bold;
+}
+
+/*event_day_events|Event day events list*/
+.event_calendar .event_day .events {
+    padding: 0;
+}
+
+/*event_day_link|Event day link*/
+.event_calendar .event_day a {
+    display: block;
+}
+
+/*event_day_link:hover|Event day link mouse over*/
+.event_calendar .event_day a:hover {
+    display: block;
+}
+
+
+
+/*event_popup|Popup box*/
+.event_popup {
+    position: absolute;
+    z-index: 10000;
+    width:300px;
+    background: white;
+    color: black;
+    display:none;
+    padding: 5px;
+    border: 1px solid #CCCCCC;
+    overflow: hidden;
+}
+
+/*event_popup_event_info_title|Popup event title*/
+.event_popup .event_info_title {
+    color: #29527A;
+    font-size: 120%;
+}
+
+/*event_popup_table|Popup table*/
+.event_popup table{
+}
+
+/*event_popup_table_lcc|Popup table left column cells*/
+.event_popup .tdTop{
+    vertical-align: top;
+}
+
+/*event_popup_table_rcc|Popup table right column cells*/
+.event_popup .content_div{
+    display:block;
+    overflow: auto;
+    max-height:200px;
+}
+
+/*event_popup_btn_close|Popup close btn*/
+.event_popup .close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    background: url(/themes/.default/images/close.png) no-repeat;
+    z-index: 20;
+}

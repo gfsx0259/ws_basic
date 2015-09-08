@@ -1,0 +1,22 @@
+.paragraph_image {
+    float:left;
+    border:1px dotted;
+    text-align: center;
+    position: relative;
+}
+
+    .paragraph_image .resize_control {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        bottom: 0;
+        right: 0;
+        z-index: 10;
+        background: url(/static/icons/resize.png) no-repeat;
+        cursor: se-resize;
+    }
+
+.paragraph_text {
+    min-height:130px;
+    margin: 5px;
+}

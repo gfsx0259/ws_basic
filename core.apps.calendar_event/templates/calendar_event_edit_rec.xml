@@ -1,0 +1,121 @@
+<tpl name="calendar_event_edit_rec">
+
+    <div class="form_row">
+        <wsc_select id="rad_rec" class="float_left w130" events="onchange=onRecTypeChanged">
+            <option value="">Disable</option>
+            <option value="d">Daily</option>
+            <option value="w">Weekly</option>
+            <option value="m">Monthly</option>
+            <option value="y">Yearly</option>
+        </wsc_select>
+    </div>
+
+
+    <div class="form_row" id="box_rec_pattern">
+        <wsc_box title="Recurrence pattern">
+            <div class="form_row" id="id_day_div" style="display:none">
+                <p class="text">Every</p>
+                <wsc_select id="r_sel_days" class="float_left w75"/>
+                <p class="text" id="r_inp_days_desc">day(s)</p>
+            </div>
+            <div class="form_row" id="id_week_div" style="display:none">
+                <wsc_checkbox id="cb_weekday_0" title="Sun" class="w14pc float_left"/>
+                <wsc_checkbox id="cb_weekday_1" title="Mon" class="w14pc float_left"/>
+                <wsc_checkbox id="cb_weekday_2" title="Tue" class="w14pc float_left"/>
+                <wsc_checkbox id="cb_weekday_3" title="Wed" class="w14pc float_left"/>
+                <wsc_checkbox id="cb_weekday_4" title="Thu" class="w14pc float_left"/>
+                <wsc_checkbox id="cb_weekday_5" title="Fri" class="w14pc float_left"/>
+                <wsc_checkbox id="cb_weekday_6" title="Sat" class="w14pc float_left"/>
+            </div>
+                
+            <div class="form_row" id="id_month_div" style="display:none">
+                <div class="form_line">
+                    <p class="text">Add </p>
+                    <wsc_text id="inp_days_offset" class="float_left w30"/>
+                    <p class="text">day(s) offset to occur date</p>
+                </div>
+
+                <hr/>
+
+                <div class="form_line">
+                    <p class="text">Every</p>
+                    <wsc_select id="r_sel_monthes1" class="float_left w75"/>
+                    <p class="text">month(s)</p> 
+                    <wsc_button title=" Add " events="onclick=addMonthRule1" class="float_left w50"/>
+                </div>
+
+                <div class="form_line">
+                    <p class="text">Day </p> 
+                    <wsc_text id="r_sel_month_day" class="float_left w30" value="1"/> 
+                    <p class="text">of every </p> 
+                    <wsc_select id="r_sel_monthes2" class="float_left w75"/>
+                    <p class="text">month(s) </p> 
+                    <wsc_button title=" Add " events="onclick=addMonthRule2" class="float_left w50"/>
+                </div>
+
+                <div class="form_line">
+                    <p class="text">The </p>
+                    <wsc_select id="r_sel_month_dnum3" class="float_left w130">
+                        <option value="1"> First </option>
+                        <option value="2"> Second </option>
+                        <option value="3"> Third </option>
+                        <option value="4"> Fourth </option>
+                        <option value="5"> Last </option>
+                    </wsc_select>
+                    <wsc_select id="r_sel_month_wday3" class="float_left w130">
+                        <option value="0"> Sunday </option>
+                        <option value="1"> Monday </option>
+                        <option value="2"> Tuesday </option>
+                        <option value="3"> Wednesday </option>
+                        <option value="4"> Thursday </option>
+                        <option value="5"> Friday </option>
+                        <option value="6"> Saturday </option>
+                    </wsc_select>
+                    <p class="text">of every</p>
+                    <wsc_select id="r_sel_monthes3" class="float_left w75"/>
+                    <p class="text">month(s)</p>
+                    <wsc_button title=" Add " events="onclick=addMonthRule3" class="float_left w50"/>
+                </div>
+
+                <div class="form_line">
+                    <p class="text">The</p>
+                    <wsc_select id="r_sel_month_wday5" class="float_left w130">
+                        <option value="0"> Saturday </option>
+                        <option value="1"> Sunday </option>
+                    </wsc_select>
+                    <p class="text">of the</p>
+                    <wsc_select id="r_sel_weekend_num5"  class="float_left w130">
+                        <option value="1"> First </option>
+                        <option value="2"> Second </option>
+                        <option value="3"> Third </option>
+                        <option value="4"> Fourth </option>
+                        <option value="5"> Last </option>                            
+                    </wsc_select> 
+                    <p class="text">full weekend of every </p>
+                    <wsc_select id="r_sel_monthes5"  class="float_left w75"/>
+                    <p class="text">month(s)</p>
+                    <wsc_button title=" Add " events="onclick=addMonthRule5" class="float_left w50"/>
+                </div>
+
+                <div id="r_month_rules" class="month_rules" style="display: none"></div>
+            </div>
+               <div class="form_row" id="id_year_div" style="display:none">
+            </div>
+        </wsc_box>
+    </div>
+
+
+    <div id="id_rec_div"  style="display:none" class="form_row">
+        <wsc_box title="Range of recurrence">
+            <div class="form_row">
+                <wsc_checkbox id="inp_rec_has_end_date" title="End date" events="onchange=onRecHasEndChanged"/>
+            </div>
+            <div class="form_row" id="box_rec_end_date">
+                <input type="hidden" id="r_end_day"/>
+                <div class="popup_cal" style="float: left" events="onclick=showDatePickerEndDate"></div>
+                <div id= "div_end_date" style="float: left"></div>
+            </div>
+        </wsc_box>
+    </div>
+
+</tpl>

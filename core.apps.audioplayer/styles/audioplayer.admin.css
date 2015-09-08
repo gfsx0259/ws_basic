@@ -1,0 +1,16 @@
+.audio_tracklist {
+    width: 100%;
+    height: 100px;
+    overflow: auto;
+    padding: 2px 0;
+    margin-bottom: 3px;
+    border-bottom: 1px solid #bbb;
+}
+.audio_track {
+    border: 1px solid #bbb;
+    overflow: hidden;
+    padding: 1px;
+    height: 1.3em;
+    white-space: nowrap;
+    margin-bottom: 2px;
+}

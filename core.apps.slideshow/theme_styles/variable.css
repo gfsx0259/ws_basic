@@ -1,0 +1,36 @@
+/*nav|Navigation box*/
+.slideshow .nav {
+    text-align: center;
+}
+
+
+/*slideshow_caption|Active slide caption*/
+.slideshow .caption {
+}
+
+/*slideshow_numbers|Slide numbers box*/
+.slideshow .numbers {
+}
+
+/*slideshow_numbers_a|Slide number*/
+.slideshow .numbers a {
+    padding: 4px;
+    vertical-align: middle;
+    text-decoration: none;
+    background: red;
+    font-size: 0;
+    color: transparent;
+    background: transparent url(/themes/.default/images/slideshow/dots.png) no-repeat 0 0;
+    margin: 0 3px;
+    cursor: pointer;
+    outline: none;
+}
+
+/*slideshow_numbers_a:hover|Slide number mouse over*/
+.slideshow .numbers a:hover {
+}
+
+/*slideshow_numbers_a_active|Active slide number*/
+.slideshow .numbers a.active {
+    background-position: 0 -12px;
+}

@@ -1,0 +1,21 @@
+<tpl name="calendar_list">
+    <input type="hidden" id="di"/>
+    <div class="event_calendar">
+        <div class="float_container nav_panel">
+            <div class="float_left float_container" style="width: 240px">
+                <div class="float_left">
+                    <input class="btn" type="button" value=" Now " events="onclick=onNowClick"/>
+                </div>
+                <div class="float_left">
+                    <div class="left" events="onclick=onPrevClick" title="Prev month"></div>
+                </div>
+                <div class="float_left date_title" id="dateTitle"></div>
+                <div class="float_left">
+                    <div class="right" events="onclick=onNextClick" title="Next month"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="calendar_list" class="newsletter_manager_list"></div>
+    </div>
+</tpl>

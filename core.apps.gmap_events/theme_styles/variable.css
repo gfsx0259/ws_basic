@@ -1,0 +1,25 @@
+/*nav|Navigation bar*/
+.gmap_event {
+    background: #FFF;
+    color: #333;
+}
+
+/*btn_left|Button prev month*/
+.gmap_event .left{
+    width:29px;
+    height:15px;
+    cursor:pointer;
+    background-image: url(/static/icons/left.png);
+}
+
+/*btn_right|Button next month*/
+.gmap_event .right{
+    width:29px;
+    height:15px;
+    cursor:pointer;
+    background-image: url(/static/icons/right.png);
+}
+
+/*btn_today|Button today*/
+.gmap_event input[type="button"] {
+}
