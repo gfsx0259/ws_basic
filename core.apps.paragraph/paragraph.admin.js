@@ -194,7 +194,7 @@ core.apps.paragraph.extendPrototype({
         core.browser.event.push(document, ["onmousemove", "onmouseup", "ondragstart"]);
         document.onmouseup = this.stopResize.bindAsEventListener(this);
         document.onmousemove = this.resize.bindAsEventListener(this);
-        document.ondragstart = function() { return false }
+        document.ondragstart = function() { return false };
         core.browser.event.kill(e);
         return false;
     },

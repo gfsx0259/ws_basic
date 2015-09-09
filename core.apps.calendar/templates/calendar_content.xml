@@ -1,7 +1,7 @@
 <tpl name="calendar_content">
     <div class="event_calendar" id="calContentDiv">
         <table class="tableView" style="text-align:right; width:100%">
-            <tbody id = "calTbl">
+            <tbody id="calTbl">
             </tbody>
         </table>
     </div>

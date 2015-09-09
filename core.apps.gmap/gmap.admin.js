@@ -142,7 +142,7 @@ core.apps.gmap.extendPrototype({
     onFindAddrClick: function() {
         var req = {
             address: this.$["inp_addr"].getValue()
-        }
+        };
         if(!req.address) return;
 
         if(!this.geocoder)

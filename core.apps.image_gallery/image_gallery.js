@@ -6,12 +6,11 @@ core.apps.image_gallery = function(args) {
         image_height: 100,
         popup: false,
         cols: 3,
-        show_documents: false,
         spacing: 1,
         items: [],
         items_per_page: 9
     }
-}
+};
 
 
 core.apps.image_gallery.prototype = {
@@ -52,7 +51,7 @@ core.apps.image_gallery.prototype = {
                     parent: this.$["pager_top"],
                     callback: this.setOffset.bind(this),
                     class_name: "pager"
-                }
+                };
                 this.pagers = { top: new core.objects.pager(p) };
                 p.parent = this.$["pager_bottom"];
                 this.pagers["bottom"] = new core.objects.pager(p);
@@ -87,34 +86,20 @@ core.apps.image_gallery.prototype = {
             page_item,
             cell_m;
 
-        //selection of documents
-        if(this.profile.show_documents){
-            var document_items = [];
-            for(var i in this.profile.items){
-                if((typeof(this.profile.items[i].doc)!="undefined" && this.profile.items[i].doc.id) || this.profile.items[i].html){
-                    document_items[document_items.length]=clone(this.profile.items[i]);
-                }
-            }
-        }
 
         for(var r=0; r<rows; r++) {
             mr = {
                 tag: "tr",
                 className: "row",
                 childs: []
-            }
+            };
             for(var c=0; c<this.profile.cols; c++) {
-                if(!this.profile.show_documents){
-                    var page_item = this.profile.items[item_idx + this.offset];
-                }else{
-                    //use specific content for rendering if show documents option is enabled
-                    var page_item = document_items[item_idx + this.offset];
-                }
+                var page_item = this.profile.items[item_idx + this.offset];
                 if(!page_item || item_idx >= this.profile.items_per_page) continue;
 
 
                 cell_m = [];
-                if(page_item.file && !this.profile.show_documents) {
+                if(page_item.file) {
                     cell_m.push(
                         { tag: "img", className: "gallery_img",
                           events: { 
@@ -130,7 +115,7 @@ core.apps.image_gallery.prototype = {
                     );
                 }
 
-                if(page_item.code && !this.profile.show_documents) {
+                if(page_item.code) {
                     cell_m.push(
                         { tag: "div", 
                           style: { 
@@ -141,24 +126,13 @@ core.apps.image_gallery.prototype = {
                     );
                 }
 
-                if((page_item.html && !this.profile.show_documents)||(this.profile.show_documents && typeof(page_item.doc)=="undefined")) {
+                if(page_item.html) {
                     cell_m.push(
-                        { tag: "div",
+                        { tag: "div", 
                           innerHTML: page_item.html }
                     );
                 }
 
-                if(typeof(page_item.doc)!='undefined'){
-                    if(page_item.doc.id && this.profile.show_documents) {
-                        cell_m.push(
-                            { tag: "div",
-                                id: "document_container_"+page_item.doc.id,
-                                innerHTML: 'Loading document...',
-                                className: 'gallery_document_item'
-                            }
-                        );
-                    }
-                }
 
                 mr.childs.push(
                     { tag: "td",
@@ -197,17 +171,9 @@ core.apps.image_gallery.prototype = {
             m.push(mr);
         }
         this.buildModel(this.$.table_body, m);
-
-        //loading documents to dom
-        for(var i in document_items){
-            core.data.texts.get(document_items[i].doc.id, this.renderDocument.bind(this));
-        }
     },
 
 
-    renderDocument: function(text){
-        $('document_container_'+text.id).innerHTML = text.content;
-    },
 
     onImgClick: function(e, idx) {
         clearTimeout(this.img_click_timeout);
@@ -269,6 +235,6 @@ core.apps.image_gallery.prototype = {
         return code;
     }
 
-}
+};
 core.apps.image_gallery.extendPrototype(core.components.html_component);
 core.apps.image_gallery.extendPrototype(core.components.desktop_app);

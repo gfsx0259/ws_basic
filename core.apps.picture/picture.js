@@ -11,7 +11,7 @@ core.apps.picture = function(args) {
         variable_content: false,
         url: ""
     }
-}
+};
 
 core.apps.picture.prototype = {
 
@@ -123,7 +123,7 @@ core.apps.picture.prototype = {
                     style = {
                         width: this.img_preloader.width * (this.$["box"].offsetHeight / this.img_preloader.height),
                         height: this.$["box"].offsetHeight
-                    }
+                    };
                     if(style.width > this.$["box"].offsetWidth) {
                         style.width = this.$["box"].offsetWidth;
                         style.height = this.img_preloader.height * (style.width / this.img_preloader.width);
@@ -132,7 +132,7 @@ core.apps.picture.prototype = {
                     style = {
                         width: this.$["box"].offsetWidth,
                         height: this.img_preloader.height * (this.$["box"].offsetWidth / this.img_preloader.width)
-                    }
+                    };
                     if(style.height > this.$["box"].offsetHeight) {
                         style.height = this.$["box"].offsetHeight;
                         style.width = this.img_preloader.width * (style.height / this.img_preloader.height);
@@ -148,7 +148,7 @@ core.apps.picture.prototype = {
                     style = {
                         width: this.img_preloader.width * (this.$["box"].offsetHeight / this.img_preloader.height),
                         height: this.$["box"].offsetHeight
-                    }
+                    };
                     if(style.width < this.$["box"].offsetWidth) {
                         style.height = style.height * (this.$["box"].offsetWidth / style.width);
                         style.width = this.$["box"].offsetWidth;
@@ -157,7 +157,7 @@ core.apps.picture.prototype = {
                     style = {
                         width: this.$["box"].offsetWidth,
                         height: this.img_preloader.height * (this.$["box"].offsetWidth / this.img_preloader.width)
-                    }
+                    };
                     if(style.height < this.$["box"].offsetHeight) {
                         style.width = style.width * (this.$["box"].offsetHeight / style.height);
                         style.height = this.$["box"].offsetHeight;
@@ -173,7 +173,7 @@ core.apps.picture.prototype = {
                     marginTop: -0.5 * this.img_preloader.height,
                     width: this.img_preloader.width,
                     height: this.img_preloader.height
-                }
+                };
                 break;
 
             case "stretch":
@@ -182,7 +182,7 @@ core.apps.picture.prototype = {
                     marginTop: -0.5 * this.$["box"].offsetHeight,
                     width: this.$["box"].offsetWidth,
                     height: this.$["box"].offsetHeight
-                }
+                };
                 break;
         }
 
@@ -191,6 +191,6 @@ core.apps.picture.prototype = {
         }
     }
 
-}
+};
 core.apps.picture.extendPrototype(core.components.html_component);
 core.apps.picture.extendPrototype(core.components.desktop_app);

@@ -1,45 +1,48 @@
 <tpl name="calendar_event_popup">
     <div id="popup_wrapper">
 
-       <div class = "event_popup" id="event_popup" style="display: none">
-       <div><div class="close" events="onclick=hidePopup"></div><span  id="popup_inp_what" class="event_info_title"></span></div>
-       <table>
-       <tbody>
-           <tr>
-               <td class="tdTop">When:</td>
-               <td id="popup_inp_when" class="content_div"></td>
-           </tr>
-           <tr style="display:none;" id="popup_sec_where">
-               <td>Where:</td>
-               <td id="popup_inp_where" class="content_div"></td>
-           </tr>
-           <tr style="display:none;" id="popup_sec_tags">
-               <td>Tags:</td>
-               <td id="popup_inp_tags" class="content_div"></td>
-           </tr>
-           <tr style="display:none;" id="popup_sec_description">
-               <td class="tdTop">Description:</td>
-               <td id="popup_inp_description" class="content_div"></td>
-           </tr>
+        <div class="event_popup" id="event_popup" style="display: none">
+            <div>
+                <div class="close" events="onclick=hidePopup"></div>
+                <span id="popup_inp_what" class="event_info_title"></span>
+            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="tdTop">When:</td>
+                        <td id="popup_inp_when" class="content_div"></td>
+                    </tr>
+                    <tr style="display:none;" id="popup_sec_where">
+                        <td>Where:</td>
+                        <td id="popup_inp_where" class="content_div"></td>
+                    </tr>
+                    <tr style="display:none;" id="popup_sec_tags">
+                        <td>Tags:</td>
+                        <td id="popup_inp_tags" class="content_div"></td>
+                    </tr>
+                    <tr style="display:none;" id="popup_sec_description">
+                        <td class="tdTop">Description:</td>
+                        <td id="popup_inp_description" class="content_div"></td>
+                    </tr>
 
-           <tr style="display:none;" id="popup_sec_contact_name">
-               <td class="tdTop">Contact name:</td>
-               <td id="popup_inp_contact_name" class="content_div"></td>
-           </tr>
-           <tr style="display:none;" id="popup_sec_contact_phone">
-               <td class="tdTop">Contact phone:</td>
-               <td id="popup_inp_contact_phone" class="content_div"></td>
-           </tr>
-           <tr style="display:none;" id="popup_sec_cost">
-               <td class="tdTop">Cost:</td>
-               <td id="popup_inp_cost" class="content_div"></td>
-           </tr>
-            <tr style="display:none;" id="popup_more_info">
-               <td class="tdTop"></td>
-               <td id="popup_more_info_link" class="content_div" style="text-align:right;"></td>
-           </tr>
-       </tbody>
-       </table>
-       </div>
+                    <tr style="display:none;" id="popup_sec_contact_name">
+                        <td class="tdTop">Contact name:</td>
+                        <td id="popup_inp_contact_name" class="content_div"></td>
+                    </tr>
+                    <tr style="display:none;" id="popup_sec_contact_phone">
+                        <td class="tdTop">Contact phone:</td>
+                        <td id="popup_inp_contact_phone" class="content_div"></td>
+                    </tr>
+                    <tr style="display:none;" id="popup_sec_cost">
+                        <td class="tdTop">Cost:</td>
+                        <td id="popup_inp_cost" class="content_div"></td>
+                    </tr>
+                    <tr style="display:none;" id="popup_more_info">
+                        <td class="tdTop"></td>
+                        <td id="popup_more_info_link" class="content_div" style="text-align:right;"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </tpl>

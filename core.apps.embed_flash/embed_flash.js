@@ -6,7 +6,7 @@ core.apps.embed_flash = function(args) {
         code: "",
         embed_flash_height: "300"
     }
-}
+};
 
 
 core.apps.embed_flash.prototype = {
@@ -63,6 +63,6 @@ core.apps.embed_flash.prototype = {
     
     
 
-}
+};
 core.apps.embed_flash.extendPrototype(core.components.html_component);
 core.apps.embed_flash.extendPrototype(core.components.desktop_app);

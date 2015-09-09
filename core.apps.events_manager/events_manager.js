@@ -9,7 +9,7 @@ core.apps.events_manager = function() {
     this.eventIdx = null;
     this.event = {};
     this.needShowColorOptionRefresh = true;
-}
+};
 
 
 core.apps.events_manager.prototype = {
@@ -112,7 +112,7 @@ core.apps.events_manager.prototype = {
                     var p = {
                         dialog: "calendar",
                         act: "get_categories"
-                    }
+                    };
                     core.transport.send("/controller.php", p, this.onCategoriesData.bind(this), "POST");
                 } else {
                     this.renderCategoriesList();
@@ -126,7 +126,8 @@ core.apps.events_manager.prototype = {
     onOkClick: function() {
         this.showElement("content_events");
         this.hideElement("content_events_editform");
-        this.onCloseClick();        
+        this.onCloseClick();
+        
     },  
 
      
@@ -179,7 +180,7 @@ core.apps.events_manager.prototype = {
             dialog: "calendar",
             act: "get_events",
             get_categories: 1
-        }
+        };
         return f;
     },
 
@@ -308,14 +309,14 @@ core.apps.events_manager.prototype = {
     showColorOptions: function() {
         if(!this.needShowColorOptionRefresh) return;
 
-        var chld1 = new Array();
-        var chld2 = new Array();
+        var chld1 = [];
+        var chld2 = [];
         var j = 0;
         for(var i=0; i<this.cateColorList.length; i++) {
             if(i < 19) {
                 chld1[j] = [
                   { tag: "td", style: {backgroundColor: this.cateColorList[i][0], fontWeight: "bold", fontSize: "28px", fontFamily: "arial", color: this.cateColorList[i][1], height: "26px", valign: "center", textAlign: "center", cursor: 'pointer' },innerHTML:  'A', events: { onclick: [ "setBgTextColor",  this.cateColorList[i] ] } }
-                ]
+                ];
                 j++;
             } else {
                 if(i==19) {
@@ -323,7 +324,7 @@ core.apps.events_manager.prototype = {
                 }
                 chld2[j] = [
                   { tag: "td", style: {backgroundColor: this.cateColorList[i][0], fontWeight: "bold", fontSize: "28px", fontFamily: "arial", color: this.cateColorList[i][1], height: "26px", valign: "center", textAlign: "center", cursor: 'pointer' },innerHTML:  'A', events: { onclick: [ "setBgTextColor",  this.cateColorList[i] ] } }
-                ]
+                ];
                 j++;
             }
         }
@@ -331,13 +332,13 @@ core.apps.events_manager.prototype = {
         var m = {
             tag: "tr",
             childs: chld1
-        }
+        };
         this.buildModel(this.$["default_colors"], m);        
 
         var m = {
             tag: "tr",
             childs: chld2
-        }
+        };
         this.buildModel(this.$["default_colors"], m);
         this.needShowColorOptionRefresh = false; 
     },
@@ -450,7 +451,7 @@ core.apps.events_manager.prototype = {
             dialog: "calendar",
             act: "delete_event",
             event_id: core.data.calendar_events[idx].id
-        }
+        };
         core.transport.send("/controller.php", p, this.onDeleteEventResponce.bind(this), "POST");
     },
 
@@ -521,7 +522,7 @@ core.apps.events_manager.prototype = {
             title: t,
             color: '#'+this.$["inp_color"].value,
             textcolor: '#'+this.$["inp_bg_color"].value
-        }
+        };
         this.setBarBlocked("Creating category...", 'categories');
         core.transport.send("/controller.php", p, this.onServerResponce.bind(this));
     },
@@ -566,7 +567,7 @@ core.apps.events_manager.prototype = {
                 title: newTitle,
                 color: '#'+newColor,
                 textcolor: '#'+newBgColor
-            }
+            };
             core.transport.send("/controller.php", p, this.onServerResponce.bind(this));
         } else {
             this.clearItemForm();
@@ -600,7 +601,7 @@ core.apps.events_manager.prototype = {
             dialog: "calendar",
             act: "delete_category",
             id: id
-        }
+        };
         core.transport.send("/controller.php", p, this.onServerResponce.bind(this));
     },
     
@@ -623,6 +624,6 @@ core.apps.events_manager.prototype = {
         }
     }
     
-}
+};
 core.apps.events_manager.extendPrototype(core.components.html_component);
 core.apps.events_manager.extendPrototype(core.components.popup_app);

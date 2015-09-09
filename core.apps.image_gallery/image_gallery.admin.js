@@ -27,12 +27,6 @@ core.apps.image_gallery.extendPrototype({
             { tag: "wsc_checkbox", title: "Enable picture popup on click", id: "inp_popup" },
           ]},
 
-        { title: "Show documents:",
-            controls: [
-                { tag: "wsc_checkbox", title: "Show document instead of images", id: "inp_show_documents" },
-            ]},
-
-
         { title: "Columns:",
           controls: [
             { tag: "wsc_slider", id: "inp_cols",
@@ -65,7 +59,6 @@ core.apps.image_gallery.extendPrototype({
         this.$["inp_items_per_page"].setValue(this.profile["items_per_page"]);
         this.$["inp_cols"].setValue(this.profile["cols"]);
         this.$["inp_spacing"].setValue(this.profile["spacing"]);
-        this.$["inp_show_documents"].setChecked(this.profile["show_documents"]);
     },
 
     processSettingsForm: function() {
@@ -74,7 +67,6 @@ core.apps.image_gallery.extendPrototype({
         this.profile["items_per_page"] = this.$["inp_items_per_page"].value;
         this.profile["cols"] = this.$["inp_cols"].value;
         this.profile["spacing"] = this.$["inp_spacing"].value;
-        this.profile["show_documents"] = this.$["inp_show_documents"].checked;
     },
 
 
@@ -100,8 +92,7 @@ core.apps.image_gallery.extendPrototype({
                 alt: "",
                 url: "",
                 code: "",
-                html: "",
-                doc:" "
+                html: ""
             },
             labels: {
 //                title: "Title:",
@@ -109,13 +100,12 @@ core.apps.image_gallery.extendPrototype({
                 alt: "Alt attribute",
                 url: "URL:",
                 code: "Code",
-                html: "Description",
-                doc:"Document"
+                html: "Description"
             },
             add_action: "select_file",
             files_filter: "pictures",
             selected_item_idx: selected_item_idx
-        }
+        };
         desktop.showPopupApp("list_editor");
     },
 
@@ -138,7 +128,7 @@ core.apps.image_gallery.extendPrototype({
         var res = {
             title: this.profile.title,
             list: this.getItemsList()
-        }
+        };
         return res;
     },
 

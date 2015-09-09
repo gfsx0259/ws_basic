@@ -204,7 +204,7 @@ core.apps.slideshow.extendPrototype({
             },
             add_action: "select_file",
             files_filter: "pictures"
-        }
+        };
         desktop.showPopupApp("list_editor");
     },
 
@@ -277,7 +277,7 @@ core.apps.slideshow.extendPrototype({
         var res = {
             title: this.profile.title,
             list: this.getItemsList()
-        }
+        };
         return res;
     },
 

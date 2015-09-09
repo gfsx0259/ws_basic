@@ -5,7 +5,7 @@ core.apps.events_categories = function(args) {
         app_style: ""
     }
 
-}
+};
 
 
 core.apps.events_categories.prototype = {
@@ -28,7 +28,7 @@ core.apps.events_categories.prototype = {
         var r = {
             dialog: "calendar",
             act: "get_categories"
-        }
+        };
         core.transport.send("/controller.php", r, this.onCategoriesResponce.bind(this));
     },
 
@@ -61,6 +61,6 @@ core.apps.events_categories.prototype = {
     }
 
 
-}
+};
 core.apps.events_categories.extendPrototype(core.components.html_component);
 core.apps.events_categories.extendPrototype(core.components.desktop_app);

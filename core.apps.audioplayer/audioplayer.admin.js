@@ -1,67 +1,74 @@
 core.apps.audioplayer.extendPrototype({
 
 
-    onFirstRun: function() {
+    onFirstRun: function () {
         this.showSettings();
         this.openPlaylistManager(true);
     },
 
 
-
     settingsBlocks: [
 
-        { title: "Size:",
-          controls: [
-            { tag: "wsc_size", id: "inp_size" },
-            { tag: "div", html: "(Height ignored when playlist is hidden) " }
-          ]},
-           
+        {
+            title: "Size:",
+            controls: [
+                {tag: "wsc_size", id: "inp_size"},
+                {tag: "div", html: "(Height ignored when playlist is hidden) "}
+            ]
+        },
 
-        { title: "Show loading",
-          controls: [
-            { tag: "wsc_select",
-              id: "inp_showloading",
-              options: [
-                { value: "autohide", text: "Autohide" },
-                { value: "always", text: "Always" },
-                { value: "never", text: "Never" }
-              ]}
-          ]},
-        { title: "Misc:",
-          controls: [
-            { tag: "wsc_checkbox", title: "Show playlist",
-              id: "inp_showlist"},
-            { tag: "div", className: "divider" },
-            { tag: "wsc_checkbox", title: "Show volume",
-              id: "inp_showvolume" },
-            { tag: "div", className: "divider" },
-            { tag: "wsc_checkbox", title: "Autoplay",
-              id: "inp_autoplay" },
-            { tag: "div", className: "divider" },
-            { tag: "wsc_checkbox", title: "Loop",
-              id: "inp_loop" }
-          ]},
 
-        { title: "Playlist:",
-          controls: [
-            { tag: "a", events: { onclick: "openPlaylistManager" },
-              html: "Manage playlist" }
-          ]}
-/*
-        { tag: "div", className: "section",
-          childs: [
-            { tag: "button", innerHTML: " Add track ",
-              events: { onclick: "onAddTrackClick" } },
-            { tag: "div", className: "text",
-              className: "audio_tracklist",
-              html: "No tracks...",
-              id: "trackList" }
-          ]}
-*/
+        {
+            title: "Show loading",
+            controls: [
+                {
+                    tag: "wsc_select",
+                    id: "inp_showloading",
+                    options: [
+                        {value: "autohide", text: "Autohide"},
+                        {value: "always", text: "Always"},
+                        {value: "never", text: "Never"}
+                    ]
+                }
+            ]
+        },
+        {
+            title: "Misc:",
+            controls: [
+                {
+                    tag: "wsc_checkbox", title: "Show playlist",
+                    id: "inp_showlist"
+                },
+                {tag: "div", className: "divider"},
+                {
+                    tag: "wsc_checkbox", title: "Show volume",
+                    id: "inp_showvolume"
+                },
+                {tag: "div", className: "divider"},
+                {
+                    tag: "wsc_checkbox", title: "Autoplay",
+                    id: "inp_autoplay"
+                },
+                {tag: "div", className: "divider"},
+                {
+                    tag: "wsc_checkbox", title: "Loop",
+                    id: "inp_loop"
+                }
+            ]
+        },
+
+        {
+            title: "Playlist:",
+            controls: [
+                {
+                    tag: "a", events: {onclick: "openPlaylistManager"},
+                    html: "Manage playlist"
+                }
+            ]
+        }
     ],
 
-    fillSettingsForm: function() {
-//        this.renderTrackList();
+    fillSettingsForm: function () {
         this.$["inp_showlist"].setChecked(this.profile["showlist"]);
         this.$["inp_showvolume"].setChecked(this.profile["showvolume"]);
         this.$["inp_autoplay"].setChecked(this.profile["autoplay"]);
@@ -71,7 +78,7 @@ core.apps.audioplayer.extendPrototype({
         this.$["inp_size"].setValue(this.profile);
     },
 
-    processSettingsForm: function() {
+    processSettingsForm: function () {
         this.profile["showlist"] = this.$["inp_showlist"].checked ? 1 : 0;
         this.profile["showvolume"] = this.$["inp_showvolume"].checked ? 1 : 0;
         this.profile["loop"] = this.$["inp_loop"].checked ? 1 : 0;
@@ -85,18 +92,17 @@ core.apps.audioplayer.extendPrototype({
     },
 
 
-    onSettingsUpdated: function() {
+    onSettingsUpdated: function () {
         this.render();
     },
 
 
-
     // edit playlist
 
-    openPlaylistManager: function(flag) {
+    openPlaylistManager: function (flag) {
         var p = this.profile;
         var list = [];
-        for(var i=0; i<p.titles.length; i++) {
+        for (var i = 0; i < p.titles.length; i++) {
             list.push({
                 title: p.titles[i],
                 file: p.tracks[i]
@@ -119,16 +125,16 @@ core.apps.audioplayer.extendPrototype({
             },
             add_action: "select_file",
             files_filter: "audio"
-        }
+        };
         desktop.showPopupApp("list_editor");
     },
 
 
-    onPlaylistChanged: function(list) {
+    onPlaylistChanged: function (list) {
         var p = this.profile;
         p.titles = [];
         p.tracks = [];
-        for(var i=0; i<list.length; i++) {
+        for (var i = 0; i < list.length; i++) {
             p.titles[i] = list[i].title;
             p.tracks[i] = list[i].file;
         }

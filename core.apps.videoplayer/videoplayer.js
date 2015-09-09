@@ -5,7 +5,7 @@ core.apps.videoplayer = function(args) {
         height: "240",
         file: ""
     }
-}
+};
 
 core.apps.videoplayer.prototype = {
 
@@ -29,7 +29,7 @@ core.apps.videoplayer.prototype = {
     render: function() {
         if(!this.profile["file"]) return;
         swfobject.embedSWF(
-            "/static/flash/player_video.swf", 
+            "/js_apps/core.apps.videoplayer/swf/player_video.swf",
             "video_container" + this.id,
             "100%", "100%",
             "9", "",
@@ -38,7 +38,7 @@ core.apps.videoplayer.prototype = {
         );
     }
 
-}
+};
 
 core.apps.videoplayer.extendPrototype(core.components.html_component);
 core.apps.videoplayer.extendPrototype(core.components.desktop_app);

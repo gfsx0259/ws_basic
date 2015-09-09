@@ -17,11 +17,11 @@ core.apps.slideshow = function(args) {
         title_in_nav: false,
         keywords: "",
         picture_position: "fit"
-    }
+    };
 
     this.animation_frames = 20;
     this.animation_frame_delay = 20;
-}
+};
 
 
 core.apps.slideshow.prototype = {
@@ -160,15 +160,15 @@ core.apps.slideshow.prototype = {
                 this.slides = core.data.variable_content.images;
             } else if(core.usertype < USERTYPE_ADMIN && this.profile["hide_if_empty"]) {
                 this.hideElement("window");
-                return;
+
             }
         } else if(this.profile["keywords"]) {
             this.slides = false;
             var p = {
-                dialog: "files",
+                dialog: "files_manager",
                 act: "search_images",
                 q: this.profile["keywords"]
-            }
+            };
             core.transport.send("/controller.php", p, this.onSearchImagesResponce.bind(this));
         } else {
             this.slides = [];
@@ -315,7 +315,7 @@ core.apps.slideshow.prototype = {
         this.loaded_slides[this.active_slide] = {
             width: this.img_preloader.width,
             height: this.img_preloader.height
-        }
+        };
         this.showActiveSlide();
     },
 
@@ -367,7 +367,7 @@ core.apps.slideshow.prototype = {
 
 
     processEffect_fade: function(pos) {
-        var v =  100 - pos * 100
+        var v =  100 - pos * 100;
         this.setElementOpacity("active_slide", 100 - pos * 100);
         this.setElementOpacity("next_slide", pos * 100);
     },
@@ -433,7 +433,7 @@ core.apps.slideshow.prototype = {
                     style = {
                         width: original_size.width * (this.$["box"].offsetHeight / original_size.height),
                         height: this.$["box"].offsetHeight
-                    }
+                    };
                     if(style.width > this.$["box"].offsetWidth) {
                         style.width = this.$["box"].offsetWidth;
                         style.height = original_size.height * (style.width / original_size.width);
@@ -442,7 +442,7 @@ core.apps.slideshow.prototype = {
                     style = {
                         width: this.$["box"].offsetWidth,
                         height: original_size.height * (this.$["box"].offsetWidth / original_size.width)
-                    }
+                    };
                     if(style.height > this.$["box"].offsetHeight) {
                         style.height = this.$["box"].offsetHeight;
                         style.width = original_size.width * (style.height / original_size.height);
@@ -458,7 +458,7 @@ core.apps.slideshow.prototype = {
                     style = {
                         width: original_size.width * (this.$["box"].offsetHeight / original_size.height),
                         height: this.$["box"].offsetHeight
-                    }
+                    };
                     if(style.width < this.$["box"].offsetWidth) {
                         style.height = style.height * (this.$["box"].offsetWidth / style.width);
                         style.width = this.$["box"].offsetWidth;
@@ -467,7 +467,7 @@ core.apps.slideshow.prototype = {
                     style = {
                         width: this.$["box"].offsetWidth,
                         height: original_size.height * (this.$["box"].offsetWidth / original_size.width)
-                    }
+                    };
                     if(style.height < this.$["box"].offsetHeight) {
                         style.width = style.width * (this.$["box"].offsetHeight / style.height);
                         style.height = this.$["box"].offsetHeight;
@@ -483,7 +483,7 @@ core.apps.slideshow.prototype = {
                     marginTop: -0.5 * original_size.height,
                     width: original_size.width,
                     height: original_size.height
-                }
+                };
                 break;
 
             case "stretch":
@@ -492,7 +492,7 @@ core.apps.slideshow.prototype = {
                     marginTop: -0.5 * this.$["box"].offsetHeight,
                     width: this.$["box"].offsetWidth,
                     height: this.$["box"].offsetHeight
-                }
+                };
                 break;
         }
 
@@ -502,6 +502,6 @@ core.apps.slideshow.prototype = {
     }
 
  
-}
+};
 core.apps.slideshow.extendPrototype(core.components.html_component);
 core.apps.slideshow.extendPrototype(core.components.desktop_app);

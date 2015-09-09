@@ -6,7 +6,7 @@ core.apps.calendar_event = function() {
     this.eventIdx = null;
     this.event = {};
     this.whatEmpty = "(No Subject)";
-}
+};
 
 
 core.apps.calendar_event.prototype = {
@@ -462,7 +462,7 @@ core.apps.calendar_event.prototype = {
 
     showDatePicker: function(e){
         e = core.browser.event.fix(e);
-        var pos = new Array(e.clientX,e.clientY);
+        var pos = [e.clientX,e.clientY];
         var w = this;
         core.externals.datepicker({
             inputField: this.$["inp_date"],
@@ -483,7 +483,7 @@ core.apps.calendar_event.prototype = {
 
     showRsvpDatePicker: function(e){
         e = core.browser.event.fix(e);
-         var pos = new Array(e.clientX,e.clientY);
+         var pos = [e.clientX,e.clientY];
          var w = this;
          core.externals.datepicker({
              inputField: this.$["inp_rsvp_date"],
@@ -507,7 +507,7 @@ core.apps.calendar_event.prototype = {
 
     showDatePickerEndDate: function(e){
          e = core.browser.event.fix(e);
-         var pos = new Array(e.clientX,e.clientY);
+         var pos = [e.clientX,e.clientY];
          var w = this;
          core.externals.datepicker({
              inputField: this.$["r_end_day"],
@@ -678,7 +678,7 @@ core.apps.calendar_event.prototype = {
         var rule = {
             type: 1,
             args: [ parseInt(this.$["r_sel_monthes1"].value, 10) ]
-        }
+        };
         this.event.repeat_data.push(rule);
         this.renderMonthRepeatRules();
     },
@@ -689,7 +689,7 @@ core.apps.calendar_event.prototype = {
         var rule = {
             type: 2,
             args: [ parseInt(this.$["r_sel_monthes2"].value, 10), d ]
-        }
+        };
         this.event.repeat_data.push(rule);
         this.renderMonthRepeatRules();
     },
@@ -702,7 +702,7 @@ core.apps.calendar_event.prototype = {
                 parseInt(this.$["r_sel_month_dnum3"].value, 10), 
                 parseInt(this.$["r_sel_month_wday3"].value, 10) 
             ]
-        }
+        };
         this.event.repeat_data.push(rule);
         this.renderMonthRepeatRules();
     },
@@ -715,7 +715,7 @@ core.apps.calendar_event.prototype = {
                 parseInt(this.$["r_sel_month_wday5"].value, 10),
                 parseInt(this.$["r_sel_weekend_num5"].value, 10)
             ]
-        }
+        };
         this.event.repeat_data.push(rule);
         this.renderMonthRepeatRules();
     },
@@ -752,6 +752,6 @@ core.apps.calendar_event.prototype = {
         this.hideTimePopup();
     }
 
-}
+};
 core.apps.calendar_event.extendPrototype(core.components.html_component);
 core.apps.calendar_event.extendPrototype(core.components.popup_app);

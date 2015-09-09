@@ -15,11 +15,11 @@ core.apps.gmap_events = function(args) {
         show_pan_control: 1,
         show_zoom_control: 1
 
-    }
+    };
     this.map = null;
     this.markers = [];
     this.date = this.getNowDate();
-}
+};
 
 
 core.apps.gmap_events.prototype = {
@@ -78,7 +78,7 @@ core.apps.gmap_events.prototype = {
             map: google.maps.MapTypeId.ROADMAP, 
             satelite: google.maps.MapTypeId.SATELLITE, 
             hybrid: google.maps.MapTypeId.HYBRID
-        }
+        };
 
         var m_opts = {
             mapTypeControl: this.profile.show_map_type_control == 1,
@@ -90,7 +90,7 @@ core.apps.gmap_events.prototype = {
             overviewMapControlOptions: { 
                 opened: true
             }
-        }
+        };
         this.map.setOptions(m_opts);
     },
 
@@ -153,7 +153,7 @@ core.apps.gmap_events.prototype = {
         for(var i=0; i<eventsIdxs.length; i++) {
             var req = {
                 address: this.getEventAddr(eventsIdxs[i])
-            }
+            };
             this.geocoder.geocode(req, this.onGeocoderResponce.bind(this, i));
         }
     },
@@ -374,6 +374,6 @@ core.apps.gmap_events.prototype = {
     }
 
 
-}
+};
 core.apps.gmap_events.extendPrototype(core.components.html_component);
 core.apps.gmap_events.extendPrototype(core.components.desktop_app);

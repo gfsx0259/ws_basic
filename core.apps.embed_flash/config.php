@@ -1,29 +1,37 @@
 <?
 
-    $config["js_apps"]["core.apps.embed_flash"] = array(
+$config["js_apps"]["core.apps.embed_flash"] = array(
 
-        "content" => array(
-            USERTYPE_ADMIN => array(
-                "code" => array(
-                    "embed_flash.js",
-                    "embed_flash.admin.js"
-                )
-            ),
-
-
-
-            USERTYPE_CONTRIBUTOR => array(
-                "code" => array("embed_flash.js")
-            ),
+    'general' => array(
+        'title' => 'Embed flash',
+        'name' => 'embed_flash',//should be like 3th part of folder
+        'version' => '1.0.0',
+        'icon' => 'icon.png',
+        'category' => CATEGORY_MEDIA,
+        'description' => ''
+    ),
 
 
-
-            USERTYPE_GUEST => array(
-                "code" => array("embed_flash.js")
+    "content" => array(
+        USERTYPE_ADMIN => array(
+            "code" => array(
+                "embed_flash.js",
+                "embed_flash.admin.js"
             )
-        )
+        ),
 
+
+        USERTYPE_CONTRIBUTOR => array(
+            "code" => array("embed_flash.js")
+        ),
+
+
+        USERTYPE_GUEST => array(
+            "code" => array("embed_flash.js")
+        )
     )
+
+)
 
 
 ?>

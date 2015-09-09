@@ -149,7 +149,7 @@ core.apps.picture.extendPrototype({
                   file: this.profile.path,
                   url: this.profile.url }
             ]
-        }
+        };
         return res;
     }
 

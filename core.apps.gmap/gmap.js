@@ -19,13 +19,13 @@ core.apps.gmap = function(args) {
         description_type: "content",
         image_path: "",
         show_marker: true
-    }
+    };
     this.map = {};
     this.countries = {};
     this.marker_desc = "";
 
 
-}
+};
 
 
 core.apps.gmap.prototype = {
@@ -211,7 +211,7 @@ core.apps.gmap.prototype = {
             map: google.maps.MapTypeId.ROADMAP, 
             satelite: google.maps.MapTypeId.SATELLITE, 
             hybrid: google.maps.MapTypeId.HYBRID
-        }
+        };
 
         var m_opts = {
             mapTypeControl: this.profile.show_map_type_control == 1,
@@ -223,11 +223,11 @@ core.apps.gmap.prototype = {
             overviewMapControlOptions: { 
                 opened: true
             }
-        }
+        };
         this.map.setOptions(m_opts);
     }
 
 
-}
+};
 core.apps.gmap.extendPrototype(core.components.html_component);
 core.apps.gmap.extendPrototype(core.components.desktop_app);

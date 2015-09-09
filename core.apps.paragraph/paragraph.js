@@ -13,7 +13,7 @@ core.apps.paragraph = function(args) {
         image_align: "left",
         image_size: 150
     }
-}
+};
 
 core.apps.paragraph.prototype = {
 
@@ -85,6 +85,6 @@ core.apps.paragraph.prototype = {
             this.$['p_image_img'].alt = "Click here for change image";
         }
     }
-}
+};
 core.apps.paragraph.extendPrototype(core.components.html_component);
 core.apps.paragraph.extendPrototype(core.components.desktop_app);

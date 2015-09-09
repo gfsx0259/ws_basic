@@ -6,7 +6,7 @@ core.apps.embed_video = function(args) {
         code: "",
         embed_video_height: "300"
     }
-}
+};
 
 
 core.apps.embed_video.prototype = {
@@ -60,6 +60,6 @@ core.apps.embed_video.prototype = {
     
     
 
-}
+};
 core.apps.embed_video.extendPrototype(core.components.html_component);
 core.apps.embed_video.extendPrototype(core.components.desktop_app);
