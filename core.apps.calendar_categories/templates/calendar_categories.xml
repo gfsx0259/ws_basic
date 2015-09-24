@@ -1,0 +1,38 @@
+<tpl name="calendar_categories">
+    <div style="width: 792px; height: 334px; padding: 8px; overflow: auto;" id="list_box">
+        <table class="nice">
+            <tbody id="list_table">
+                <tr class="head" style="height:10px; " >
+                    <th style="width: 80%;height:10px; ">Title</th>
+                    <th style="width: 70px;height:10px; ">Color</th>
+                    <th style="width: 50px; text-align: center;height:10px; ">Actions</th>
+                </tr>
+
+                <tr class="noted" id="item_editor">
+                    <td><input id="inp_title" value="" style="width: 100%"/></td>
+                    <td>
+                        <div id="inp_color" class="inp_color_preview" events="onclick=showColorPicker"></div>
+                        <img src="/static/icons/color_swatch.png" class="btn_color_picker" events="onclick=showColorPicker"/>
+<!--                        <select id="inp_color" value="" style="width:70px"></select> -->
+                    </td>
+                    <td style="text-align: center; width: 75px;">
+                        <button id="btn_add_item" events="onclick=onAddItemClick">
+                            <img src="/static/icons/add.png"/> Add
+                        </button>
+                        <button id="btn_save_item" events="onclick=onSaveItemClick" style="display: none">
+                            <img src="/static/icons/disk.png"/> Save
+                        </button>
+                    </td>
+                </tr>
+
+                <tr class="noted" id="msg" style="display: none">
+                    <td colSpan="3" id="msg_content"></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="nice_table_footer"><div></div></div>
+    </div>
+    <div class="popup_buttons"><div class="popup_buttons_wrapper">
+        <input id="btn_popup_ok" type="button" class="float_right" value=" Ok " events="onclick=onCloseClick"/>
+    </div></div>
+</tpl>

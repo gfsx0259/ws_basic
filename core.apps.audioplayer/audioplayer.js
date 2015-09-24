@@ -67,7 +67,7 @@ core.apps.audioplayer.prototype = {
         );
         this.$["audioplayer_object"].id = oid;
 
-        swfobject.embedSWF("/js_apps/core.apps.audioplayer/static/player_mp3_multi.swf", oid, width, height, "9.0.0", "", flashvars, params);
+        swfobject.embedSWF("/vendor/generdyn/basic/core.apps.audioplayer/static/player_mp3_multi.swf", oid, width, height, "9.0.0", "", flashvars, params);
         this.isEmbedded = true;
     }
 };
