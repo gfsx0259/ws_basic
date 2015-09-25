@@ -29,7 +29,7 @@ core.apps.videoplayer.prototype = {
     render: function() {
         if(!this.profile["file"]) return;
         swfobject.embedSWF(
-            "/js_apps/core.apps.videoplayer/swf/player_video.swf",
+            "/vendor/generdyn/basic/core.apps.videoplayer/swf/player_video.swf",
             "video_container" + this.id,
             "100%", "100%",
             "9", "",

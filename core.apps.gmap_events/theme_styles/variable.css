@@ -9,7 +9,7 @@
     width:29px;
     height:15px;
     cursor:pointer;
-    background-image: url('/js_apps/core.apps.gmap_events/images/left.png');
+    background-image: url('/vendor/generdyn/basic/images/left.png');
 }
 
 /*btn_right|Button next month*/
@@ -17,7 +17,7 @@
     width:29px;
     height:15px;
     cursor:pointer;
-    background-image: url('/js_apps/core.apps.gmap_events/images/right.png');
+    background-image: url('/vendor/generdyn/basic/images/right.png');
 }
 
 /*btn_today|Button today*/

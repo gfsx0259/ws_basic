@@ -10,9 +10,7 @@ $config['js_apps']['core.apps.calendar'] = array(
         'description' => '',
         'depends' => [
             'calendar_event',
-            'calendar_categories',
-            'events_categories',
-            'events_manager'
+            'calendar_categories'
         ]
     ),
     'content' => array(
