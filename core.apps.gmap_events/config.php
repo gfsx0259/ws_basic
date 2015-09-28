@@ -6,7 +6,6 @@ $config["js_apps"]["core.apps.gmap_events"] = array(
         'title' => 'Events on Map',
         'name' => 'gmap_events',//should be like 3th part of folder
         'version' => '1.0.0',
-        'icon' => 'icon.png',
         'category' => CATEGORY_MAPS,
         'description' => '',
         'depends' => [

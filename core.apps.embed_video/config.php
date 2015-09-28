@@ -6,7 +6,6 @@ $config["js_apps"]["core.apps.embed_video"] = array(
         'title' => 'Embed video',
         'name' => 'embed_video',//should be like 3th part of folder
         'version' => '1.0.0',
-        'icon' => 'icon.png',
         'category' => CATEGORY_MEDIA,
         'description' => ''
     ),

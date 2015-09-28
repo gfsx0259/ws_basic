@@ -5,7 +5,6 @@ $config['js_apps']['core.apps.calendar'] = array(
         'title' => 'Calendar',
         'name' => 'calendar',//should be like 3th part of folder
         'version' => '1.0.0',
-        'icon' => 'icon.png',
         'category' => CATEGORY_DATES,
         'description' => '',
         'depends' => [

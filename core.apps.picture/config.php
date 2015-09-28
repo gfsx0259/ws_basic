@@ -6,7 +6,6 @@ $config["js_apps"]["core.apps.picture"] = array(
         'title' => 'Picture',
         'name' => 'picture',//should be like 3th part of folder
         'version' => '1.0.0',
-        'icon' => 'icon.png',
         'category' => CATEGORY_BASIC,
         'description' => '',
         'depends'=>[

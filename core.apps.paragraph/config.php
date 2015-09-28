@@ -6,7 +6,6 @@ $config["js_apps"]["core.apps.paragraph"] = array(
         'title' => 'Image & Text',
         'name' => 'paragraph',//should be like 3th part of folder
         'version' => '1.0.0',
-        'icon' => 'icon.png',
         'category' => CATEGORY_BASIC,
         'description' => '',
         'depends'=>[
