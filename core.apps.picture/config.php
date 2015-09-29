@@ -9,8 +9,7 @@ $config["js_apps"]["core.apps.picture"] = array(
         'category' => CATEGORY_BASIC,
         'description' => '',
         'depends'=>[
-            'files_manager',
-            'image_editor'
+            'files_manager'
         ]
     ),
 
